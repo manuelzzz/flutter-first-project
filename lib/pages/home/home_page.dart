@@ -8,6 +8,7 @@ enum PopupMenuPages {
   botoesRotacaoTexto,
   singleChildScrollView,
   listView,
+  dialogs,
 }
 
 class HomePage extends StatelessWidget {
@@ -42,42 +43,50 @@ class HomePage extends StatelessWidget {
                   Navigator.of(context).pushNamed('/botoes_rotacao_texto');
                   break;
                 case PopupMenuPages.singleChildScrollView:
-                  Navigator.of(context).pushNamed('/scrolls/single_child_scroll_view');
+                  Navigator.of(context)
+                      .pushNamed('/scrolls/single_child_scroll_view');
                   break;
                 case PopupMenuPages.listView:
                   Navigator.of(context).pushNamed('/scrolls/list_view');
+                  break;
+                case PopupMenuPages.dialogs:
+                  Navigator.of(context).pushNamed('/dialogs');
                   break;
               }
             },
             itemBuilder: (BuildContext context) {
               return <PopupMenuItem<PopupMenuPages>>[
-                PopupMenuItem(
+                PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.container,
                   child: Text('Container'),
                 ),
-                PopupMenuItem(
+                PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.rowsColumns,
                   child: Text('Rows & Columns'),
                 ),
-                PopupMenuItem(
+                PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.mediaQuery,
                   child: Text('Media Query'),
                 ),
-                PopupMenuItem(
+                PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.layoutBuilder,
                   child: Text('Layout Builder'),
                 ),
-                PopupMenuItem(
+                PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.botoesRotacaoTexto,
                   child: Text('Botoes e rotaçao de texto'),
                 ),
-                PopupMenuItem(
+                PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.singleChildScrollView,
                   child: Text('Single child Scroll view'),
                 ),
-                PopupMenuItem(
+                PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.listView,
                   child: Text('List view'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.dialogs,
+                  child: Text('Dialogs'),
                 ),
               ];
             },
