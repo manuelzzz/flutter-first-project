@@ -26,14 +26,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.indigo[200],
+        primarySwatch: Colors.indigo,
+        primaryColorLight: Colors.indigo[200],
+        primaryColorDark: Colors.black54,
+        fontFamily: 'Roboto',
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueGrey.shade700,
+          ),
+        ),
+        scaffoldBackgroundColor: Colors.lightBlue[50],
+      ),
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       routes: {
         '/': (_) => HomePage(),
         '/container': (_) => ContainerPage(),

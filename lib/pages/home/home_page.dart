@@ -13,7 +13,11 @@ enum PopupMenuPages {
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  final materialColorTransparent = MaterialStateColor.resolveWith((states) {
+    return Colors.black.withOpacity(0.014);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +105,40 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-      body: Container(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              padding: EdgeInsets.fromLTRB(70, 70, 70, 70),
+              decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(25),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.lightBlue.shade200,
+                      blurRadius: 100,
+                      offset: Offset(10, 10),
+                    )
+                  ]),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  iconColor: MaterialStateColor.resolveWith((states) {
+                    return Colors.black;
+                  }),
+                  backgroundColor: materialColorTransparent,
+                  overlayColor: materialColorTransparent,
+                  shadowColor: materialColorTransparent,
+                ),
+                onPressed: () {},
+                child: Icon(Icons.ads_click_rounded),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
