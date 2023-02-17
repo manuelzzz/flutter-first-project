@@ -1,8 +1,10 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_first_project/pages/botoes_rotacao_texto/botoes_rotacao_texto_page.dart';
+import 'package:flutter_first_project/pages/cidades/cidades_page.dart';
 import 'package:flutter_first_project/pages/container/container_page.dart';
 import 'package:flutter_first_project/pages/dialogs/dialogs_page.dart';
+import 'package:flutter_first_project/pages/forms/forms_page.dart';
 import 'package:flutter_first_project/pages/home/home_page.dart';
 import 'package:flutter_first_project/pages/layout_builder/layout_builder_page.dart';
 import 'package:flutter_first_project/pages/rows_columns/rows_columns_page.dart';
@@ -10,6 +12,7 @@ import 'package:flutter_first_project/pages/media_query/media_query_page.dart';
 import 'package:flutter_first_project/pages/scrolls/listview_page.dart';
 import 'package:flutter_first_project/pages/scrolls/singlechildscrollview_page.dart';
 import 'package:flutter_first_project/pages/snack_bar/snack_bar_page.dart';
+import 'package:flutter_first_project/pages/stack/stack_page.dart';
 
 void main() {
   runApp(
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.indigo[200],
+        // primaryColor: Colors.indigo[100],
         primarySwatch: Colors.indigo,
         primaryColorLight: Colors.indigo[200],
         primaryColorDark: Colors.black54,
@@ -55,6 +58,9 @@ class MyApp extends StatelessWidget {
         '/scrolls/list_view': (_) => ListviewPage(),
         '/dialogs': (_) => DialogsPage(),
         '/snack_bar': (_) => SnackBarPage(),
+        '/forms': (_) => FormsPage(),
+        '/cidades': (_) => CidadesPage(),
+        '/stack': (_) => StackPage(),
       },
     );
   }
