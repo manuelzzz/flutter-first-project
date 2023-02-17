@@ -1,0 +1,30 @@
+[
+  {
+    "cidade": "São Paulo",
+    "estado": "SP"
+  },
+  {
+    "cidade": "Santo André",
+    "estado": "SP"
+  },
+  {
+    "cidade": "Guarulhos",
+    "estado": "SP"
+  },
+  {
+    "cidade": "São Caetano",
+    "estado": "SP"
+  },
+  {
+    "cidade": "São Bernardo do Campo",
+    "estado": "SP"
+  },
+  {
+    "cidade": "Natal",
+    "estado": "RN"
+  },
+  {
+    "cidade": "Parnamirim",
+    "estado": "RN"
+  }
+]
