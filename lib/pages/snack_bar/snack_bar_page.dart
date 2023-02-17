@@ -10,18 +10,42 @@ class SnackBarPage extends StatelessWidget {
         title: const Text('SnackBar'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            final snackBar = SnackBar(
-              content: Text('SnackBar funcionando :)'),
-              action: SnackBarAction(
-                label: 'Desfazer',
-                onPressed: () {},
-              ),
-            );
-            ScaffoldMessenger.of(context).showSnackBar(snackBar);
-          },
-          child: Icon(Icons.ads_click_sharp),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                final simpleSnackBar = SnackBar(
+                  content: Text('Simple SnackBar'),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(simpleSnackBar);
+              },
+              child: Text('Simple SnackBar'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                final actionSnackBar = SnackBar(
+                  content: Text('SnackBar com action ->'),
+                  backgroundColor: Colors.blueGrey.shade700,
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () {},
+                    textColor: Colors.white,
+                  ),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(actionSnackBar);
+                ScaffoldMessenger.of(context).removeCurrentSnackBar();
+                ScaffoldMessenger.of(context).showSnackBar(actionSnackBar);
+              },
+              child: Text('Action SnackBar'),
+            ),
+            TextButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).clearSnackBars();
+              },
+              child: Text('Clear snackBars'),
+            ),
+          ],
         ),
       ),
     );
