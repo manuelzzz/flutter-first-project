@@ -13,6 +13,7 @@ enum PopupMenuPages {
   forms,
   cidades,
   stack,
+  stack2,
 }
 
 class HomePage extends StatelessWidget {
@@ -72,6 +73,9 @@ class HomePage extends StatelessWidget {
                 case PopupMenuPages.stack:
                   Navigator.of(context).pushNamed('/stack');
                   break;
+                case PopupMenuPages.stack2:
+                  Navigator.of(context).pushNamed('/stack2');
+                  break;
               }
             },
             itemBuilder: (BuildContext context) {
@@ -123,6 +127,10 @@ class HomePage extends StatelessWidget {
                 PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.stack,
                   child: Text('Stack'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.stack2,
+                  child: Text('Segunda Stack'),
                 ),
               ];
             },
