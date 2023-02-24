@@ -2,11 +2,15 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_first_project/pages/botoes_rotacao_texto/botoes_rotacao_texto_page.dart';
 import 'package:flutter_first_project/pages/cidades/cidades_page.dart';
+import 'package:flutter_first_project/pages/circle_avatar/circle_avatar_page.dart';
+import 'package:flutter_first_project/pages/colors/colors_page.dart';
 import 'package:flutter_first_project/pages/container/container_page.dart';
 import 'package:flutter_first_project/pages/dialogs/dialogs_page.dart';
+import 'package:flutter_first_project/pages/bottom_navigator_bar/bottom_navigator_bar_page.dart';
 import 'package:flutter_first_project/pages/forms/forms_page.dart';
 import 'package:flutter_first_project/pages/home/home_page.dart';
 import 'package:flutter_first_project/pages/layout_builder/layout_builder_page.dart';
+import 'package:flutter_first_project/pages/material_banner/material_banner_page.dart';
 import 'package:flutter_first_project/pages/rows_columns/rows_columns_page.dart';
 import 'package:flutter_first_project/pages/media_query/media_query_page.dart';
 import 'package:flutter_first_project/pages/scrolls/listview_page.dart';
@@ -41,7 +45,6 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.blueGrey.shade700,
           ),
         ),
-        scaffoldBackgroundColor: Colors.lightBlue[50],
       ),
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
@@ -63,6 +66,10 @@ class MyApp extends StatelessWidget {
         '/cidades': (_) => CidadesPage(),
         '/stack': (_) => StackPage(),
         '/stack2': (_) => StackPage2(),
+        '/bottomNavigatorBar': (_) => BottomNavigatorBarPage(),
+        '/circleAvatar': (_) => CircleAvatarPage(),
+        '/colors': (_) => ColorsPage(),
+        '/materialBanner': (_) => MaterialBannerPage(),
       },
     );
   }

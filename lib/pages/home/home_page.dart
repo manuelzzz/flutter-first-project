@@ -14,6 +14,10 @@ enum PopupMenuPages {
   cidades,
   stack,
   stack2,
+  bottomNavigatorBar,
+  circleAvatar,
+  colors,
+  materialBanner,
 }
 
 class HomePage extends StatelessWidget {
@@ -76,6 +80,18 @@ class HomePage extends StatelessWidget {
                 case PopupMenuPages.stack2:
                   Navigator.of(context).pushNamed('/stack2');
                   break;
+                case PopupMenuPages.bottomNavigatorBar:
+                  Navigator.of(context).pushNamed('/bottomNavigatorBar');
+                  break;
+                case PopupMenuPages.circleAvatar:
+                  Navigator.of(context).pushNamed('/circleAvatar');
+                  break;
+                case PopupMenuPages.colors:
+                  Navigator.of(context).pushNamed('/colors');
+                  break;
+                case PopupMenuPages.materialBanner:
+                  Navigator.of(context).pushNamed('/materialBanner');
+                  break;
               }
             },
             itemBuilder: (BuildContext context) {
@@ -131,6 +147,22 @@ class HomePage extends StatelessWidget {
                 PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.stack2,
                   child: Text('Segunda Stack'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.bottomNavigatorBar,
+                  child: Text('Bottom Navigator Bar'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.circleAvatar,
+                  child: Text('Circle avatar'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.colors,
+                  child: Text('Colors'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.materialBanner,
+                  child: Text('Material Banner'),
                 ),
               ];
             },
